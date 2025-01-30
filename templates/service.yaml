@@ -3,11 +3,13 @@ kind: Service
 metadata:
   name: cyberchef
   labels:
-    {{- include "cyberchef-helm-chart.labels" . | nindent 4 }}
+    app: {{ .Values.labels.app }}
+    environment: {{ .Values.labels.environment }}
 spec:
   type: {{ .Values.service.type }}
   ports:
     - port: {{ .Values.service.port }}
       targetPort: 80
   selector:
-    {{- include "cyberchef-helm-chart.selectorLabels" . | nindent 4 }}
+    app: {{ .Values.labels.app }}
+    environment: {{ .Values.labels.environment }}
