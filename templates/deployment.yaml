@@ -1,18 +1,18 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: {{ include "my-helm-chart.fullname" . }}
+  name: {{ include "cyberchef-helm-chart.fullname" . }}
   labels:
-    {{- include "my-helm-chart.labels" . | nindent 4 }}
+    {{- include "cyberchef-helm-chart.labels" . | nindent 4 }}
 spec:
   replicas: {{ .Values.replicaCount }}
   selector:
     matchLabels:
-      {{- include "my-helm-chart.selectorLabels" . | nindent 6 }}
+      {{- include "cyberchef-helm-chart.selectorLabels" . | nindent 6 }}
   template:
     metadata:
       labels:
-        {{- include "my-helm-chart.selectorLabels" . | nindent 8 }}
+        {{- include "cyberchef-helm-chart.selectorLabels" . | nindent 8 }}
     spec:
       containers:
         - name: {{ .Chart.Name }}
