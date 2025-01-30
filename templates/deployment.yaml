@@ -3,16 +3,19 @@ kind: Deployment
 metadata:
   name: cyberchef
   labels:
-    {{- include "cyberchef-helm-chart.labels" . | nindent 4 }}
+    app: {{ .Values.labels.app }}
+    environment: {{ .Values.labels.environment }}
 spec:
   replicas: {{ .Values.replicaCount }}
   selector:
     matchLabels:
-      {{- include "cyberchef-helm-chart.selectorLabels" . | nindent 6 }}
+      app: {{ .Values.labels.app }}
+      environment: {{ .Values.labels.environment }}
   template:
     metadata:
       labels:
-        {{- include "cyberchef-helm-chart.selectorLabels" . | nindent 8 }}
+        app: {{ .Values.labels.app }}
+        environment: {{ .Values.labels.environment }}
     spec:
       containers:
         - name: {{ .Chart.Name }}
