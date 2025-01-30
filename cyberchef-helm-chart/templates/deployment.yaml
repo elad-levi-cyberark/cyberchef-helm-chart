@@ -3,25 +3,24 @@ kind: Deployment
 metadata:
   name: cyberchef
   labels:
-    app: {{ .Values.labels.app }}
-    environment: {{ .Values.labels.environment }}
+    app: cyberchef
+    environment: production
+    team: devops
 spec:
-  replicas: {{ .Values.replicaCount }}
+  replicas: 1
   selector:
     matchLabels:
-      app: {{ .Values.labels.app }}
-      environment: {{ .Values.labels.environment }}
+      app: cyberchef
   template:
     metadata:
       labels:
-        app: {{ .Values.labels.app }}
-        environment: {{ .Values.labels.environment }}
+        app: cyberchef
+        environment: production
+        team: devops
     spec:
       containers:
-        - name: {{ .Chart.Name }}
-          image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
-          imagePullPolicy: {{ .Values.image.pullPolicy }}
+        - name: cyberchef
+          image: ghcr.io/gchq/cyberchef:latest
+          imagePullPolicy: IfNotPresent
           ports:
             - containerPort: 80
-          resources:
-            {{- toYaml .Values.resources | nindent 12 }}
