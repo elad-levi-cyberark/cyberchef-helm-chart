@@ -12,6 +12,10 @@ service:
 ingress:
   enabled: false
 
+labels:
+  app: cyberchef
+  environment: production
+
 resources: {}
 nodeSelector: {}
 tolerations: []
