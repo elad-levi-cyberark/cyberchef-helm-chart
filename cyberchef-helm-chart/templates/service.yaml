@@ -3,13 +3,12 @@ kind: Service
 metadata:
   name: cyberchef
   labels:
-    app: {{ .Values.labels.app }}
-    environment: {{ .Values.labels.environment }}
+    app: cyberchef
+    environment: production
 spec:
-  type: {{ .Values.service.type }}
+  type: ClusterIP
   ports:
-    - port: {{ .Values.service.port }}
+    - port: 80
       targetPort: 80
   selector:
-    app: {{ .Values.labels.app }}
-    environment: {{ .Values.labels.environment }}
+    app: cyberchef
