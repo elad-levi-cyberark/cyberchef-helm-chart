@@ -19,6 +19,6 @@ spec:
       containers:
         - name: cyberchef
           image: ghcr.io/gchq/cyberchef:latest
-          imagePullPolicy: IfNotPresent
+          imagePullPolicy: Always
           ports:
             - containerPort: 80
