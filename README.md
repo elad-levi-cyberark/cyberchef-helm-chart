@@ -1,5 +1,5 @@
 # cyberchef-helm-chart
-Helm Chart for CyberChef
+Helm Chart for [CyberChef](https://github.com/gchq/CyberChef)
 
 ## Build
 ```bash
