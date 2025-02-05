@@ -18,7 +18,7 @@ spec:
     spec:
       containers:
         - name: cyberchef
-          image: "{{ .Values.image.repository | default "ghcr.io/gchq/cyberchef" }}:{{ .Values.image.tag | default "latest" }}"
+          image: {{ .Values.image.repository | default "ghcr.io/gchq/cyberchef" }}:{{ .Values.image.tag | default "latest" }}
           imagePullPolicy: Always
           ports:
             - containerPort: 80
