@@ -1,2 +1,2 @@
-repository: "ghcr.io/gchq/cyberchef"
-tag: "latest"
+imageRepository: "ghcr.io/gchq/cyberchef"
+imageTag: "latest"
