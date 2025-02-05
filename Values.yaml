@@ -1,2 +1,3 @@
 imageRepository: "ghcr.io/gchq/cyberchef"
 imageTag: "latest"
+imagePullPolicy: "Always"
