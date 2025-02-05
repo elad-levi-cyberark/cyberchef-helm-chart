@@ -5,7 +5,7 @@ Helm Chart for [CyberChef](https://github.com/gchq/CyberChef)
 ```bash
 git clone https://github.com/elad-levi-cyberark/cyberchef-helm-chart.git
 cd cyberchef-helm-chart
-helm package cyberchef-helm-chart
+helm package .
 ```
 
 ## Install
