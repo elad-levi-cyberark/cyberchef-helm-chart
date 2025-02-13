@@ -1,4 +1,6 @@
 # cyberchef-helm-chart
+[![GitHub Issues](https://img.shields.io/github/issues/elad-levi-cyberark/cyberchef-helm-chart)](https://github.com/elad-levi-cyberark/cyberchef-helm-chart/issues)
+
 Helm Chart for [CyberChef](https://github.com/gchq/CyberChef)
 
 ## Build
