@@ -1,4 +1,5 @@
 # cyberchef-helm-chart
+![GitHub Repo stars](https://img.shields.io/github/stars/elad-levi-cyberark/cyberchef-helm-chart)
 ![GitHub Created At](https://img.shields.io/github/created-at/elad-levi-cyberark/cyberchef-helm-chart?color=blue)
 ![GitHub contributors](https://img.shields.io/github/contributors/elad-levi-cyberark/cyberchef-helm-chart)
 ![GitHub Release](https://img.shields.io/github/v/release/elad-levi-cyberark/cyberchef-helm-chart)
